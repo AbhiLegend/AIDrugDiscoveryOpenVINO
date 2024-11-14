@@ -2,7 +2,8 @@
 
 ##Steps we have performed
 ---
-###Step 1: Lipophilicity Prediction
+##Step 1: Lipophilicity Prediction
+
 •	Objective: Assess the lipophilicity (hydrophobic or hydrophilic characteristics) of drug-like molecules, as it affects the molecule's pharmacokinetics, including absorption, distribution, and solubility.
 •	Procedure:
 o	Data Preparation: Use a molecular dataset with known lipophilicity values. Ensure molecules are represented using SMILES notation.
@@ -10,7 +11,7 @@ o	Modeling: Deploy a pre-trained OpenVINO model optimized for regression tasks, 
 o	Deployment on OpenShift: Containerize the model and deploy it on RedHat OpenShift for scalable predictions. The platform supports container orchestration, making it ideal for real-time lipophilicity assessments.
 o	Output: Receive predicted lipophilicity scores, allowing you to screen molecules based on their potential suitability in drug development.
 ---
-###Step 2: Binding Affinity Prediction
+##Step 2: Binding Affinity Prediction
 ---
 •	Objective: Evaluate the binding affinity between the molecule and a biological target, which is crucial for efficacy.
 •	Procedure:
