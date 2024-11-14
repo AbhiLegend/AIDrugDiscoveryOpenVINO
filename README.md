@@ -5,6 +5,7 @@ emoji: 🐨
 ----
 
 Steps we have performed
+---
 Step 1: Lipophilicity Prediction
 •	Objective: Assess the lipophilicity (hydrophobic or hydrophilic characteristics) of drug-like molecules, as it affects the molecule's pharmacokinetics, including absorption, distribution, and solubility.
 •	Procedure:
@@ -12,14 +13,18 @@ o	Data Preparation: Use a molecular dataset with known lipophilicity values. Ens
 o	Modeling: Deploy a pre-trained OpenVINO model optimized for regression tasks, fine-tuned to predict lipophilicity.
 o	Deployment on OpenShift: Containerize the model and deploy it on RedHat OpenShift for scalable predictions. The platform supports container orchestration, making it ideal for real-time lipophilicity assessments.
 o	Output: Receive predicted lipophilicity scores, allowing you to screen molecules based on their potential suitability in drug development.
+---
 Step 2: Binding Affinity Prediction
+---
 •	Objective: Evaluate the binding affinity between the molecule and a biological target, which is crucial for efficacy.
 •	Procedure:
 o	Data Preparation: Gather a dataset with labeled binding affinities for various protein-ligand pairs. Represent ligands in SMILES and proteins in appropriate 3D formats.
 o	Modeling: Use OpenVINO for accelerated processing and inference, with a focus on predicting binding affinity. Machine learning models like deep docking networks can predict how well the molecule binds to a target protein.
 o	Deployment: Deploy the affinity model on OpenShift to handle large batches, scaling for drug library screening.
 o	Output: Generate binding affinity scores, ranking molecules based on their likelihood of binding effectively to the target.
+----
 Step 3: Molecule Generation and Scoring
+---
 •	Objective: Generate new molecules based on an initial molecular scaffold and score them for potential efficacy.
 •	Procedure:
 o	Scaffold Selection: Define an initial molecule or scaffold with promising characteristics.
@@ -27,17 +32,22 @@ o	Molecule Generation: Using RDKit in conjunction with OpenVINO, create variatio
 o	Scoring: Score generated molecules on metrics like lipophilicity, binding affinity, and other pharmacokinetic properties using previously deployed models.
 o	Deployment: The generation and scoring workflow can be containerized and deployed on OpenShift for efficient, parallel processing of molecular variants.
 o	Output: Rank and select the top candidates with the highest scores for further analysis.
+---
 Step 4: Reaction Prediction and SMILES Visualization
+---
 •	Objective: Predict chemical reactions and visualize the resulting products to assess synthetic feasibility and optimize the drug synthesis pathway.
 •	Procedure:
 o	Reaction Prediction: Use OpenVINO-accelerated models trained for reaction prediction. Provide the SMILES representation of reactants, and the model predicts potential products based on known reaction patterns.
 o	Visualization: Use OpenVINO's capabilities to generate visual representations of SMILES, converting them into a format that chemists can analyze. This aids in understanding the reaction outcomes visually.
 o	Deployment: Reaction prediction and visualization workflows are deployed on OpenShift to facilitate real-time feedback for synthesis planning.
 o	Output: Predicted products and their visual representations, assisting in selecting feasible reactions for synthesizing new drug compounds.
+---
 Step 5: Reaction Prediction with RAG (Retrieval-Augmented Generation) Integration
+---
 •	Objective:
 o	The goal of integrating Retrieval-Augmented Generation (RAG) is to enhance the accuracy of reaction predictions by combining external data retrieval with generative modeling. By retrieving examples of similar reactions, RAG provides context from historical data, helping to improve prediction quality and relevance.
 o	This approach assists researchers by delivering predictions enriched with relevant chemical pathways, thereby informing decisions with contextually accurate and feasible synthetic pathways.
+---
 •	Procedure:
 o	Data Retrieval:
 	Objective: Retrieve similar reactions and synthesis pathways from a database to provide historical context for the current prediction.
