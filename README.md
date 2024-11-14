@@ -1,12 +1,8 @@
----
-title: DrugDOpenVINO
-emoji: 🐨
 
-----
 
-Steps we have performed
+##Steps we have performed
 ---
-Step 1: Lipophilicity Prediction
+###Step 1: Lipophilicity Prediction
 •	Objective: Assess the lipophilicity (hydrophobic or hydrophilic characteristics) of drug-like molecules, as it affects the molecule's pharmacokinetics, including absorption, distribution, and solubility.
 •	Procedure:
 o	Data Preparation: Use a molecular dataset with known lipophilicity values. Ensure molecules are represented using SMILES notation.
@@ -14,7 +10,7 @@ o	Modeling: Deploy a pre-trained OpenVINO model optimized for regression tasks, 
 o	Deployment on OpenShift: Containerize the model and deploy it on RedHat OpenShift for scalable predictions. The platform supports container orchestration, making it ideal for real-time lipophilicity assessments.
 o	Output: Receive predicted lipophilicity scores, allowing you to screen molecules based on their potential suitability in drug development.
 ---
-Step 2: Binding Affinity Prediction
+###Step 2: Binding Affinity Prediction
 ---
 •	Objective: Evaluate the binding affinity between the molecule and a biological target, which is crucial for efficacy.
 •	Procedure:
@@ -23,7 +19,7 @@ o	Modeling: Use OpenVINO for accelerated processing and inference, with a focus 
 o	Deployment: Deploy the affinity model on OpenShift to handle large batches, scaling for drug library screening.
 o	Output: Generate binding affinity scores, ranking molecules based on their likelihood of binding effectively to the target.
 ---
-Step 3: Molecule Generation and Scoring
+###Step 3: Molecule Generation and Scoring
 ---
 •	Objective: Generate new molecules based on an initial molecular scaffold and score them for potential efficacy.
 •	Procedure:
@@ -33,7 +29,7 @@ o	Scoring: Score generated molecules on metrics like lipophilicity, binding affi
 o	Deployment: The generation and scoring workflow can be containerized and deployed on OpenShift for efficient, parallel processing of molecular variants.
 o	Output: Rank and select the top candidates with the highest scores for further analysis.
 ---
-Step 4: Reaction Prediction and SMILES Visualization
+###Step 4: Reaction Prediction and SMILES Visualization
 ---
 •	Objective: Predict chemical reactions and visualize the resulting products to assess synthetic feasibility and optimize the drug synthesis pathway.
 •	Procedure:
@@ -42,7 +38,7 @@ o	Visualization: Use OpenVINO's capabilities to generate visual representations 
 o	Deployment: Reaction prediction and visualization workflows are deployed on OpenShift to facilitate real-time feedback for synthesis planning.
 o	Output: Predicted products and their visual representations, assisting in selecting feasible reactions for synthesizing new drug compounds.
 ---
-Step 5: Reaction Prediction with RAG (Retrieval-Augmented Generation) Integration
+###Step 5: Reaction Prediction with RAG (Retrieval-Augmented Generation) Integration
 ---
 •	Objective:
 o	The goal of integrating Retrieval-Augmented Generation (RAG) is to enhance the accuracy of reaction predictions by combining external data retrieval with generative modeling. By retrieving examples of similar reactions, RAG provides context from historical data, helping to improve prediction quality and relevance.
