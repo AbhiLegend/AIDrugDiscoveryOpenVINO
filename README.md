@@ -22,7 +22,7 @@ o	Data Preparation: Gather a dataset with labeled binding affinities for various
 o	Modeling: Use OpenVINO for accelerated processing and inference, with a focus on predicting binding affinity. Machine learning models like deep docking networks can predict how well the molecule binds to a target protein.
 o	Deployment: Deploy the affinity model on OpenShift to handle large batches, scaling for drug library screening.
 o	Output: Generate binding affinity scores, ranking molecules based on their likelihood of binding effectively to the target.
-----
+---
 Step 3: Molecule Generation and Scoring
 ---
 •	Objective: Generate new molecules based on an initial molecular scaffold and score them for potential efficacy.
@@ -68,6 +68,7 @@ o	Deployment on OpenShift:
 o	Output:
 	Enhanced Reaction Predictions: The integration of RAG with OpenVINO generates reaction predictions that are contextually relevant and informed by historical reaction data.
 	Synthesized Pathways: Alongside the predicted likelihood score, similar reactions from the Qdrant database are displayed, giving researchers a synthesized view of feasible reaction pathways. This output supports researchers in selecting pathways that are not only theoretically possible but also practically informed by real-world data.
+---
 
 
 
